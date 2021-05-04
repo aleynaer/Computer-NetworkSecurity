@@ -27,7 +27,7 @@ context = ssl.create_default_context()
 #msg = message.encode('UTF-8')
 #%%
 
-def sendMail(message):
+def sendMail(message,subject):
     with smtplib.SMTP(smtp_server, port) as server:
         server.ehlo()  # Can be omitted
         server.starttls(context=context)
